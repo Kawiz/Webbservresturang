@@ -1,0 +1,52 @@
+block content
+
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    form(action="/registers", method="post")
+      .reg-container
+        h1 Bästa Pizza Register
+        p fill in the form to create an account.
+        hr
+        label(for='username')
+          b Username
+        input(type='reg-text',  placeholder="Enter Username",  name="username", required)
+      
+        label(for='password')
+          b Password
+        input(id="password",type='reg-password', placeholder="Enter Password", name="password", required)
+
+        label(for='confirm-password')
+          b Repeat Password
+        input(id="confirm-password",type='reg-password', placeholder="Enter Password", name="confirm-password", required)
+        
+        hr
+        button.registerbtn(type='submit') Register
+        p= errorMsg
+      .container.signin
+        p
+          | Already have an account? 
+          a(href='http://localhost:3000/login') Sign in
+          | .
+
+
+
+    script.
+        var password = document.getElementById("password")
+        var confirm_password = document.getElementById("confirm-password");
+
+        function validatePassword(){
+            if(password.value != confirm_password.value) {
+                confirm_password.setCustomValidity("Passwords Don't Match");
+            } else {
+                confirm_password.setCustomValidity('');
+            }
+        }
+
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+        
+

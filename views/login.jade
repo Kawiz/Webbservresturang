@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    form(action="/login", method="post")
+      .imgcontainer
+        img.avatar(src='/images/pizza.jpg' alt='pizza')
+      .container
+        label(for='username')
+          b Username
+        input(type="text", placeholder="Enter Username", name="username", required)
+        label(for='password')
+          b Password
+         input(type="password", placeholder="Enter Password", name="password", required)
+        button(type='submit') Login
+        p= errorMsg
+       
+      .container(style='background-color:#f1f1f1')
+        span.password
+          | Don't have an account? 
+          a(href='/registers') Register 

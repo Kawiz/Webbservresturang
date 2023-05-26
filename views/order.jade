@@ -1,0 +1,50 @@
+doctype html
+html
+  head
+    link(rel='stylesheet' href='/stylesheets/index.css')
+    style.
+      body {background-color: lightgray;}
+  body
+// backround img
+.imgbox
+  img.menu-picture-fit(src='/images/kebabpizza.jpg')
+  .pizza-logo
+    a(href='/')
+      img(src='/images/images2.0.png' alt='LOGO')
+  .menu-box
+    a(href='/menu')
+      p Meny
+  .contacts-box
+    a(href='/contacts')
+      p Kontakt
+  .order-box
+    a(href='/order')
+      p Beställ
+  .login-box
+    a(href='/')
+      img(src='/images/login-pic.png' alt='login' height='90px')
+// varukorg
+.order-info
+  h1 Varukorg:
+  br
+  p Calzone - 2x
+  p Kebab Pizza - 1x
+  p Pommes Tallrik - 3x
+  br
+  #my_form
+    br
+    br
+    label(for='price-tag') Totalt: För mycket kr
+    br
+    br
+    button#nextStep Betala
+  #thank_you(style='display: none;')
+    u Din Beställning Görs Redo!
+    br
+script.
+  var nextStep = document.querySelector('#nextStep');
+  nextStep.addEventListener('click', function (e) {
+  e.preventDefault();
+  document.getElementById('my_form').style.display = 'none';
+  document.getElementById('thank_you').style.display = 'block';
+  });

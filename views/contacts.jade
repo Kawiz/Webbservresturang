@@ -1,0 +1,62 @@
+doctype html
+html
+  head
+    // - titel på sidan -
+    title
+      | Bästa Pizzerian
+    link(rel='stylesheet' href='/stylesheets/index.css')
+    style.
+      body {background-color: lightgray;}
+  body
+    // backround img
+    .imgbox
+      img.menu-picture-fit(src='/images/opengraph.jpg')
+      .pizza-logo
+        a(href='/')
+          img(src='/images/images2.0.png' alt='LOGO')
+      .menu-box
+        a(href='/menu')
+          p Meny
+      .contacts-box
+        a(href='/contacts')
+          p Kontakt
+      .order-box
+        a(href='/order')
+          p Beställ
+      .login-box
+        a(href='/profile')
+          img(src='/images/login-pic.png' alt='login' height='90px')
+    .member-form
+      form(action='/action_page.php')
+        h1 Formulär
+        br
+        br
+        label(for='name') Namn:
+        input#name(type='text' name='name' placeholder='Ange ditt namn')
+        br
+        br
+        label(for='email') E-post adress:
+        input#email(type='text' name='email' placeholder='Ange E-post adress')
+        br
+        br
+        label(for='email') Telefon nummer:
+        input#number(type='text' name='number' placeholder='Ange Telefon nummer')
+        br
+        br
+        input(type='reset' value='Återställ')
+        input(type='reset' value='Skicka')
+    .contacts-info
+      h1 Information
+      p
+        | Plats: Nti Kronhus
+      br
+      p Telefon Nummer: 070 xxx xx xx
+      br
+      p
+        | Mer Om Oss: 
+        br
+        | Instagram
+        br
+        | facebook
+        br
+        | Karta 

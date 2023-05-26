@@ -1,0 +1,101 @@
+doctype html
+html
+  head
+    // - titel på sidan -
+    title
+      | Bästa Pizzerian
+    link(rel='stylesheet' href='/stylesheets/index.css')
+    style.
+      body {background-color: lightgray;}
+  body
+    // backround img
+    .imgbox
+      img.menu-picture-fit(src='/images/369063.jpg')
+      .pizza-logo
+        a(href='/')
+          img(src='/images/images2.0.png' alt='LOGO')
+      .menu-box
+        a(href='/menu')
+          p Meny
+      .contacts-box
+        a(href='/contacts')
+          p Kontakt
+      .order-box
+        a(href='/order')
+          p Beställ
+      .login-box
+        a(href='/')
+          img(src='/images/login-pic.png' alt='login' height='90px')
+    .pizza-header
+      div
+        br
+        h2 Pizza I Lager:
+    .menu-center
+      div
+        table(width='100%')
+          tbody
+            tr
+              td(rowspan='2')
+              td
+                b
+                  br
+                  br
+                  br
+                  |  Margherita - 95 kr
+                  br
+                button(type='button') Lägg till i varukorg
+            tr
+              td Ost, Vitlök
+            tr
+              td(rowspan='2')  
+              td
+                b
+                  hr(style='width:100%;text-align:left;margin-left:0' color='green')
+                  img(src='/images/download.jpg' width='250px' height='150px')
+                  br
+                  br
+                  br
+                  | Calzone - 120 kr
+                  br
+                button(type='button') Lägg till i varukorg
+            tr
+              td
+                | Ost, Biff, Vitlök 
+                hr(style='width:100%;text-align:left;margin-left:0' color='green')
+                img(src='/images/1920@80.webp' width='250px' height='150px')
+            tr
+              td(rowspan='2')
+              td
+                b
+                  br
+                  br
+                  br
+                  | Kebab Pizza - 110 kr
+                  br
+                button(type='button') Lägg till i varukorg
+            tr
+              td Ost, Kebab 
+            tr
+              td(rowspan='2')  
+              td
+                b
+                  hr(style='width:100%;text-align:left;margin-left:0' color='green')
+                  img(src='/images/kebabpizza.jpg' width='250px' height='150px')
+                  br
+                  br
+                  br
+                  | Pommes Tallrik - 45 kr
+                  br
+                button(type='button') Lägg till i varukorg
+            tr
+              td
+                | Pommes, Valfri Dressing
+                hr(style='width:100%;text-align:left;margin-left:0' color='green')
+                img(src='/images/9.-Pommestallrik.webp' width='250px' height='150px')
+            tr
+              td(rowspan='2')
+              td
+                b
+                  br
+                 
+      
